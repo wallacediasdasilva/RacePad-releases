@@ -19,7 +19,7 @@ Baixe a versão mais recente em **[Releases](../../releases/latest)**:
 | Arquivo | Para |
 |---|---|
 | `RacePad-Setup-x.y.z.exe` | PC com Windows 10 ou 11 (64 bits) |
-| `RacePad-x.y.z.apk` | celular Android 7.0 ou mais novo |
+| `RacePad-x.y.z.apk` | celular ou tablet Android 7.0 ou mais novo (32 ou 64 bits) |
 
 ## Instalação
 

@@ -9,6 +9,8 @@ Transforma o celular Android em uma **button box de cockpit** para jogos de simu
 - Painel livre: mova, redimensione, adicione e remova controles; desfazer/refazer
 - Perfis por jogo (modelos prontos de Corrida e Caminhão), retrato e paisagem em tela cheia
 - Teclas F13–F24 por padrão: não conflitam com nenhum atalho e os jogos aceitam no mapeamento
+- **Mostradores com dados do jogo** (Le Mans Ultimate): pneus, bandeira, posição, sessão, tempos de
+  volta, combustível/energia, carro e gráfico de pedais, no mesmo painel dos botões
 
 ## Download
 
@@ -50,10 +52,40 @@ A rede Wi‑Fi de casa precisa estar como **Rede privada** no Windows
 Nas configurações de controles do jogo, escolha a ação (ex.: "Ligar motor") e toque o botão
 correspondente no celular para o jogo gravar a tecla.
 
+## Mostradores (telemetria do Le Mans Ultimate)
+
+Além dos botões, o painel pode mostrar os dados do jogo, atualizados 20 vezes por segundo:
+
+| Mostrador | Mostra |
+|---|---|
+| **Pneus** | temperatura de cada pneu em 3 faixas (azul frio, verde ideal, vermelho quente), pressão, borracha restante, freio |
+| **Bandeira** | bandeira atual, piscando nas amarelas, FCY, azul e vermelha; setores com amarela; o celular vibra |
+| **Posição** | posição geral e na classe, distância para o carro da frente e o de trás |
+| **Sessão** | tempo restante (ou voltas), temperatura do ar e da pista, chuva |
+| **Tempos de volta** | volta atual, última, melhor e delta |
+| **Combustível e energia** | combustível, energia virtual, bateria e quantas voltas ainda dá |
+| **Carro** | marcha, velocidade, luzes de troca, TC, ABS, distribuição de freio, limitador |
+| **Pedais** | gráfico dos últimos 5 s de acelerador, freio e embreagem, e o volante |
+
+Para usar:
+
+1. No Le Mans Ultimate, ligue a **memória compartilhada** nas opções do jogo e reinicie o jogo.
+2. No app: **Perfis → Novo perfil → Telemetria (Le Mans Ultimate)** cria um painel pronto com todos os
+   mostradores (ou adicione um a um em **Editar → Adicionar**).
+3. Com o RacePad Receiver rodando no PC e o jogo aberto, os mostradores se enchem sozinhos.
+
+Sem o jogo, **Config → Dados de demonstração** mostra uma corrida inventada, para montar o painel. No PC,
+**Ver telemetria** (botão direito no ícone da bandeja) mostra o que está sendo lido do jogo.
+
 ## Problemas comuns
 
 - **O celular não encontra o PC:** confira se o RacePad Receiver está na bandeja, se a rede do Windows
   está como Privada e se os dois estão no mesmo Wi‑Fi (redes de convidados costumam isolar aparelhos).
+  O IP do PC pode mudar: use **Config → Procurar na rede** de novo. Se o Windows perguntou
+  **"Permitir acesso?"** e a opção de redes privadas ficou desmarcada, reinstale o RacePad (o instalador
+  limpa esse bloqueio).
+- **Os mostradores ficam em "sem dados":** o jogo precisa estar aberto com a memória compartilhada ligada
+  nas opções (e reiniciado depois de ligar), e **Config → Dados de demonstração** desligado no app.
 - **A tecla chega no PC mas não no jogo:** se o jogo roda como administrador, abra o RacePad Receiver como
   administrador também (botão direito → Executar como administrador).
 

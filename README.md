@@ -11,6 +11,9 @@ Transforma o celular Android em uma **button box de cockpit** para jogos de simu
 - Teclas F13–F24 por padrão: não conflitam com nenhum atalho e os jogos aceitam no mapeamento
 - **Mostradores com dados do jogo** (Le Mans Ultimate): pneus, bandeira, posição, sessão, tempos de
   volta, combustível/energia, carro e gráfico de pedais, no mesmo painel dos botões
+- **Overlay no PC**: os mesmos mostradores por cima do jogo, no monitor, sem precisar do celular
+- **Análise de voltas**: compara duas voltas gravadas pelo LMU (delta, velocidade, pedais, mapa da pista)
+  e exporta em CSV
 
 ## Download
 
@@ -77,6 +80,38 @@ Para usar:
 Sem o jogo, **Config → Dados de demonstração** mostra uma corrida inventada, para montar o painel. No PC,
 **Ver telemetria** (botão direito no ícone da bandeja) mostra o que está sendo lido do jogo.
 
+## Overlay na tela do PC
+
+Os mesmos mostradores podem aparecer **por cima do jogo, no monitor**, sem o celular:
+
+1. No Le Mans Ultimate, use o modo de tela **sem bordas** (ou janela). Em tela cheia exclusiva, nada
+   aparece por cima do jogo.
+2. Clique com o botão direito no ícone da bandeja e escolha **Overlay na tela → Mostrar overlay** (ou
+   aperte **Ctrl+Shift+O**).
+3. Clique em **Arrumar posições** (ou aperte **Ctrl+Shift+M**) e arraste cada mostrador para onde quiser.
+   - Para mudar o tamanho, use o canto de baixo à direita ou a roda do mouse.
+   - Para esconder um mostrador, clique nele com o botão direito.
+   - Para travar tudo, clique em **Concluir**.
+
+Travado, o overlay não atrapalha: os cliques passam para o jogo, e ele some quando você troca de janela
+ou sai da pista. No mesmo menu você escolhe quais mostradores aparecem e a opacidade. Ali também fica
+**Dados de demonstração**, para arrumar as posições sem o jogo.
+
+## Análise de voltas
+
+O Le Mans Ultimate pode gravar a telemetria completa de cada sessão. Para isso, ligue **Automatically
+Record Telemetry** nas opções do jogo. Para abrir as gravações, clique com o botão direito no ícone da
+bandeja e escolha **Análise de voltas**. Ela compara duas voltas pela distância percorrida:
+
+- **delta de tempo** acumulado, velocidade, acelerador, freio, marcha e volante, com uma volta sobre a
+  outra (a roda do mouse dá zoom e arrastar move o gráfico);
+- **mapa da pista** pintado de verde onde se ganha tempo e de vermelho onde se perde, com a lista dos
+  trechos onde mais se perde;
+- **Exportar CSV** das voltas, pronto para abrir no Excel.
+
+Ao abrir, ela mostra a gravação mais recente e compara a melhor volta com a segunda melhor. Para comparar
+outra volta, dê um clique duplo nela. Para escolher a volta de referência, clique nela com o botão direito.
+
 ## Problemas comuns
 
 - **O celular não encontra o PC:** confira se o RacePad Receiver está na bandeja, se a rede do Windows
@@ -86,6 +121,12 @@ Sem o jogo, **Config → Dados de demonstração** mostra uma corrida inventada,
   limpa esse bloqueio).
 - **Os mostradores ficam em "sem dados":** o jogo precisa estar aberto com a memória compartilhada ligada
   nas opções (e reiniciado depois de ligar), e **Config → Dados de demonstração** desligado no app.
+- **O overlay não aparece no jogo:** o jogo precisa estar em tela **sem bordas** ou em janela, não em
+  tela cheia. O overlay só aparece com o LMU em primeiro plano e o carro na pista. Use **Ctrl+Shift+M**
+  para ver os mostradores mesmo sem dados.
+- **A análise de voltas não mostra nenhuma gravação:** ligue **Automatically Record Telemetry** no LMU
+  e dê pelo menos uma volta completa. Se o jogo estiver instalado fora da pasta padrão do Steam, use
+  **Escolher pasta** na janela da análise.
 - **A tecla chega no PC mas não no jogo:** se o jogo roda como administrador, abra o RacePad Receiver como
   administrador também (botão direito → Executar como administrador).
 
